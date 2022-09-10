@@ -24,6 +24,7 @@ closeMenu.addEventListener("click", () => {
     burgerMenu.style.display = "block";
 });
 
+//call to api to get background
 
 async function getBackground() {
     const results = await API("playercards/2d91369b-4fb5-28c6-3111-c285c9a32c2c");
@@ -59,3 +60,60 @@ async function getAgentPreview() {
 }
 
 getAgentPreview()
+
+//get maps preview
+
+async function getMapPreview() {
+    const results = await API("maps");
+    const data = results.data.data.slice(0, 3);
+
+    console.log(data)
+
+    data.forEach(data => {
+        const container = document.querySelector(".maps");
+        const img = document.createElement("img");
+        img.setAttribute("src", data.splash);
+        img.classList.add("img-preview-size");
+        container.appendChild(img);
+    });
+}
+
+getMapPreview()
+
+//get cards preview
+
+async function getCardPreview() {
+    const results = await API("playercards");
+    const data = results.data.data.slice(0, 5);
+
+    console.log(data)
+
+    data.forEach(data => {
+        const container = document.querySelector(".cards");
+        const img = document.createElement("img");
+        img.setAttribute("src", data.displayIcon);
+        img.classList.add("img-preview-size");
+        container.appendChild(img);
+    });
+}
+
+getCardPreview()
+
+//get weapons preview
+
+async function getWeaponPreview() {
+    const results = await API("weapons");
+    const data = results.data.data.slice(0, 5);
+
+    console.log(data)
+
+    data.forEach(data => {
+        const container = document.querySelector(".weapons");
+        const img = document.createElement("img");
+        img.setAttribute("src", data.displayIcon);
+        img.classList.add("img-preview-size");
+        container.appendChild(img);
+    });
+}
+
+getWeaponPreview()
