@@ -104,7 +104,8 @@ body {
     width: 100vw;
     background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), var(--base));
     position: absolute;
-    margin-top: -20%;
+    z-index: 500;
+    margin-top: -22%;
     height: 80px;
 }
 
@@ -129,8 +130,10 @@ body {
     margin: -50% 2% 2%;
 }
 
-.img-bg-size {
-    position: relative;
+.background {
+    background-image: url(./public/background-wallpaper.jpg);
+    background-size: cover;
+    background-position: center;
     height: 60vh;
     width: 100vw;
 }
