@@ -109,6 +109,10 @@ body {
     height: 80px;
 }
 
+.inactive {
+    display: none !important;
+}
+
 
 /*hero section*/
 
@@ -184,6 +188,43 @@ body {
     width: 90%;
     border-radius: 10px;
     margin: 10%;
+}
+
+
+/*agents page section*/
+
+.agents-page-section {
+    height: auto;
+    position: relative;
+}
+
+.agents-page-title {
+    color: var(--text);
+    margin: 15%;
+    display: flex;
+    justify-content: center;
+    letter-spacing: 1px;
+    font-size: 40px;
+}
+
+.agents-page-container {
+    margin: 10%;
+}
+
+.img-agent-size {
+    position: relative;
+    margin: 15% 5%;
+    height: 30vh;
+    width: 70vw;
+    border: 2px solid var(--text);
+    box-shadow: var(--shadow);
+    border-radius: 10%;
+}
+
+.agent-name {
+    color: var(--text);
+    display: flex;
+    justify-content: center;
 }
 
 

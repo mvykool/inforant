@@ -1,5 +1,9 @@
 import './style.css'
 import axios from "axios";
+import { agentsPage } from './agents';
+import { homeSection } from './nodes';
+import { getAgentPage } from './agents';
+
 
 const API = axios.create({
     baseURL: "https://valorant-api.com/v1/",
@@ -23,6 +27,8 @@ closeMenu.addEventListener("click", () => {
     menu.style.marginRight = "-100%"
     burgerMenu.style.display = "block";
 });
+
+
 
 
 //call api for previews
@@ -97,6 +103,10 @@ async function getWeaponPreview() {
     });
 }
 
+//get modules
+
+agentsPage()
+
 
 
 window.addEventListener("DOMContentLoaded", navigator, false);
@@ -105,13 +115,13 @@ window.addEventListener("hashchanged", navigator, false);
 
 function navigator() {
     if (location.hash.startsWith("#agents")) {
-        filmPage()
+        agentPage()
     } else if (location.hash.startsWith("#maps")) {
-        moviePage()
+        mapsPage()
     } else if (location.hash.startsWith("#cards")) {
-        moviePage()
+        cardsPage()
     } else if (location.hash.startsWith("#weapons")) {
-        moviePage()
+        weaponsPage()
     } else {
         homePage()
     }
@@ -124,3 +134,22 @@ function homePage() {
     getAgentPreview()
 
 }
+
+function agentPage() {
+    homeSection.classList.add("inactive");
+    getAgentPage()
+}
+
+import { toAgents } from './nodes';
+
+toAgents.addEventListener("click", () => {
+    location.hash = "#agents";
+    window.location.reload();
+})
+
+import { toAgentsMenu } from './nodes';
+
+toAgentsMenu.addEventListener("click", () => {
+    location.hash = "#agents";
+    window.location.reload();
+})
