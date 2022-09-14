@@ -1,7 +1,7 @@
 import './style.css'
 import axios from "axios";
 import { agentsPage } from './agents';
-import { homeSection } from './nodes';
+import { agentPageSection, homeSection } from './nodes';
 import { getAgentPage } from './agents';
 
 
@@ -122,6 +122,8 @@ function navigator() {
         cardsPage()
     } else if (location.hash.startsWith("#weapons")) {
         weaponsPage()
+    } else if (location.hash.startsWith("#agent-info")) {
+        agentInfoPage()
     } else {
         homePage()
     }
@@ -132,6 +134,7 @@ function homePage() {
     getCardPreview()
     getMapPreview()
     getAgentPreview()
+    agentPageSection.classList.add("inactive")
 
 }
 
