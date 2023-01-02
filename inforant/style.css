@@ -225,6 +225,7 @@ body {
     color: var(--text);
     display: flex;
     justify-content: center;
+    font-size: 25px;
 }
 
 
