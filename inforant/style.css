@@ -24,7 +24,7 @@ body {
 
 .logo-title {
     position: absolute;
-    padding: 2%;
+    padding: 3%;
     background-color: var(--base);
     border-radius: 15%;
     z-index: 500;
