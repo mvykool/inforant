@@ -213,9 +213,9 @@ body {
 
 .img-agent-size {
     position: relative;
-    margin: 15% 5%;
+    margin: 15% 20%;
     height: 30vh;
-    width: 70vw;
+    width: 50vw;
     border: 2px solid var(--text);
     box-shadow: var(--shadow);
     border-radius: 10%;
