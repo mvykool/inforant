@@ -234,7 +234,7 @@ body {
 footer {
     width: 100vw;
     background-color: var(--high-lighter);
-    margin-top: 50px;
+    margin-top: 40px;
     backdrop-filter: blur(3px);
     display: flex;
     height: 40vh;
